@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Window</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Modal Window Demo</h1>
+    </header>
+
+    <main class="content">
+        <section class="section">
+            <h2>About Layering and z-index</h2>
+            <p>The <code>z-index</code> property controls stacking order along the Z axis. It works only on positioned
+                elements.</p>
+            <p>Typical issues arise due to new stacking contexts: for example, the parent has <code>transform</code> or
+                <code>opacity</code>.
+            </p>
+            <p>Modal windows often use fixed positioning and a high <code>z-index</code> to appear above the UI.</p>
+            <p>The backdrop darkens the background, focusing the user’s attention on the dialog.</p>
+            <p>It’s important to maintain hierarchy: modal content must be above the backdrop.</p>
+            <p>Semantic, clean markup improves maintainability and accessibility.</p>
+        </section>
+    </main>
+
+    <div class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <h2>Modal Window</h2>
+            <p>This modal window is always visible! Demonstration of the correct use of <code>z-index</code>.</p>
+        </div>
+    </div>
+</body>
+
+</html>
